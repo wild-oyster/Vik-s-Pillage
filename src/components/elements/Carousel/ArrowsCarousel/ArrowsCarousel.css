@@ -1,0 +1,35 @@
+.slider-arrow-next,
+.slider-arrow-prev {
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-20px);
+  position: absolute;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider-arrow-prev {
+  left: -70px;
+}
+
+.slider-arrow-next {
+  right: -70px;
+}
+
+.icon-arrow {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1175px) {
+  .slider-arrow-next,
+  .slider-arrow-prev {
+    display: none;
+  }
+}

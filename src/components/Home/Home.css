@@ -1,0 +1,163 @@
+.globalContainer {
+  height: 100vh;
+  width: 100%;
+  background: url('../../assets/HomeImg/BackgroundHome.png') center no-repeat;
+  background-size: cover;
+}
+
+.title-home-page {
+  color: #d6d6d6;
+  font-size: 80px;
+}
+
+blockquote p::before {
+  content: '\201C';
+  margin-right: 2px;
+}
+
+blockquote p::after {
+  content: '\201D';
+  margin-left: 2px;
+}
+
+.container-text {
+  display: flex;
+  justify-content: center;
+  margin-left: 10rem;
+  flex-direction: column;
+  margin-top: 65px;
+}
+
+.title-explorers {
+  font-family: Skranji;
+  color: #d6d6d6;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.text-home {
+  color: #d6d6d6;
+  font-size: 25px;
+}
+
+.content-text-home {
+  width: 50rem;
+  margin-top: 50px;
+}
+
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.btn-mute {
+  height: 70px;
+  width: 70px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 500;
+  background-color: #d6d6d6;
+  margin-top: 20px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.btn-pause-home {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-mute-home {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1175px) {
+  .text-home {
+    color: #d6d6d6;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-home-page {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .content-text-home {
+    width: 100%;
+    margin-top: 12px;
+    padding: 1rem;
+  }
+
+  .container-text {
+    margin-left: 0rem;
+    text-align: center;
+  }
+
+  .btn-pause-home {
+    justify-content: center;
+  }
+}
+
+.main-home {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.snow {
+  animation: wind 5s linear infinite alternate;
+}
+
+.snow:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  background: url('../../assets/HomeImg/snow-light.png');
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes wind {
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 761px) {
+  .title-home-page {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .content-text-home {
+    display: none;
+  }
+
+  .slick-dot {
+    bottom: -75px;
+  }
+}

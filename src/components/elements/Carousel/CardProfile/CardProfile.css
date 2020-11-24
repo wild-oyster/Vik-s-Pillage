@@ -1,0 +1,45 @@
+.cardGlobalContainer-card {
+  height: 180px;
+  width: 308px;
+  padding: 16px;
+  background: rgba(214, 214, 214, 0.4);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1px;
+}
+
+.container-card-rpofile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-img-carousel {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.img-container-card {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.card-infos {
+  width: 60%;
+  text-align: center;
+}
+
+.text-profile-card {
+  color: rgb(27, 27, 27);
+  margin-top: 10px;
+  text-align: left;
+}
+
+.title-card-profile {
+  font-size: 20px;
+  border-bottom: 2px solid #000;
+}
