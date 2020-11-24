@@ -85,7 +85,7 @@ function Profil(props) {
             <div className='resourcesContainer'>
               <h3>Ressources :</h3>
               <div className='list-ressource'>
-                <ul>
+                <ul className="yes">
                   <li className='li-profile-card'>
                     <div
                       className='icon'

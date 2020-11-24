@@ -8,6 +8,7 @@
 .title-home-page {
   color: #d6d6d6;
   font-size: 80px;
+  font-family: "Skranji";
 }
 
 blockquote p::before {
@@ -29,7 +30,7 @@ blockquote p::after {
 }
 
 .title-explorers {
-  font-family: Skranji;
+  font-family: "Skranji";
   color: #d6d6d6;
   font-size: 35px;
   margin-bottom: 30px;
