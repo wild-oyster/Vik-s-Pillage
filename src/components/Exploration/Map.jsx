@@ -1,9 +1,7 @@
 import React from "react";
 import mapboxgl from "mapbox-gl";
-// import "mapbox-gl/dist/mapbox-gl.css";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiZmxvcmVudGxlbSIsImEiOiJja2hveDNuYzcxNWY5MndteDM2djE3NnlxIn0.UuP-JCIEimNyvaSefaRr9A";
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
 
 class Map extends React.Component {
   constructor() {
@@ -13,20 +11,19 @@ class Map extends React.Component {
       lng: 10.012028,
       zoom: 5,
     };
-    
+
   }
 
   componentDidMount() {
     const { setSelectedMarker } = this.props;
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: "mapbox://styles/florentlem/ckhoys5sr2ar919pkqrrav9hk",
+      style: process.env.REACT_APP_MAPBOX_STYLE,
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom,
     });
 
-    // eslint-disable-next-line array-callback-return
-    this.props.markers.map((point, index) => {
+    this.props.markers.forEach((point, index) => {
       let marker = document.createElement("div");
       marker.className = "markerMap";
       marker.addEventListener("click", function () {
@@ -54,22 +51,22 @@ class Map extends React.Component {
         <div className="mapBox">
           {selectedMarker && (
             <div className="selectedMarker" >
-                <h2>Location : <br/> {selectedMarker.object.name}</h2>
-                <div className="imgSelectedMarker"/> 
-                  { !selectedMarker.object.done ? (
-                    <>
-                    <ul>
-                      <li><div className="logoRessourcesMapGold"/>{selectedMarker.object.ressources.gold}</li>
-                      <li><div className="logoRessourcesMapFood" />{selectedMarker.object.ressources.food}</li>
-                    </ul>
-                    <ul>
-                      <li><div className="logoRessourcesMapWood" />{selectedMarker.object.ressources.wood}</li>
-                      <li><div className="logoRessourcesMapEnemies" />{selectedMarker.object.ressources.enemies}</li>
-                    </ul>
-                  </>
-                    ) : <p>Done</p>}
-                  {!selectedMarker.object.done ? <button className="buttonAttack" onClick={handleAttack}>Attack</button> : <button className="buttonAttack" onClick={closedLocation}>Already looted</button>}
-                </div>
+              <h2>Location : <br /> {selectedMarker.object.name}</h2>
+              <div className="imgSelectedMarker" />
+              {!selectedMarker.object.done && (
+                <>
+                  <ul>
+                    <li><div className="logoResourcesMapGold" />{selectedMarker.object.resources.gold}</li>
+                    <li><div className="logoResourcesMapFood" />{selectedMarker.object.resources.food}</li>
+                  </ul>
+                  <ul>
+                    <li><div className="logoResourcesMapWood" />{selectedMarker.object.resources.wood}</li>
+                    <li><div className="logoResourcesMapEnemies" />{selectedMarker.object.resources.enemies}</li>
+                  </ul>
+                </>
+              )}
+              {!selectedMarker.object.done ? <button className="buttonAttack" onClick={handleAttack}>Attack</button> : <button className="buttonAttack" onClick={closedLocation}>Already looted</button>}
+            </div>
           )}
           <div
             ref={(el) => (this.mapContainer = el)}
@@ -80,12 +77,12 @@ class Map extends React.Component {
           <h3>Loot</h3>
           <div className="lootBoard">
             <ul className="lootContainer">
-              <li className="loot"><div className="logoRessourcesMapGold"/>{currentGold}</li>
-              <li className="loot"><div className="logoRessourcesMapFood" />{currentFood}</li>
+              <li className="loot"><div className="logoResourcesMapGold" />{currentGold}</li>
+              <li className="loot"><div className="logoResourcesMapFood" />{currentFood}</li>
             </ul>
             <ul className="lootContainer">
-              <li className="loot"><div className="logoRessourcesMapWood" />{currentWood}</li>
-              <li className="loot"><div className="logoRessourcesMapEnemies" />{currentKills}</li>
+              <li className="loot"><div className="logoResourcesMapWood" />{currentWood}</li>
+              <li className="loot"><div className="logoResourcesMapEnemies" />{currentKills}</li>
             </ul>
           </div>
         </div>

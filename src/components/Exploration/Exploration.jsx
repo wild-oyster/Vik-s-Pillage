@@ -1,6 +1,7 @@
-import React from "react";
-import Map from "./Map";
 import "./Exploration.css";
+
+import Map from "./Map";
+import React from "react";
 
 class Exploration extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Exploration extends React.Component {
         {
           name: "Winterton",
           position: [-0.59, 53],
-          ressources: {
+          resources: {
             gold: 350,
             food: 80,
             enemies: 70,
@@ -21,7 +22,7 @@ class Exploration extends React.Component {
         {
           name: "Eccles on sea",
           position: [1.55, 52.8],
-          ressources: {
+          resources: {
             gold: 680,
             food: 500,
             enemies: 100,
@@ -31,7 +32,7 @@ class Exploration extends React.Component {
         {
           name: "Walcotte",
           position: [-1.16, 52.44],
-          ressources: {
+          resources: {
             gold: 1400,
             food: 325,
             enemies: 1000,
@@ -41,7 +42,7 @@ class Exploration extends React.Component {
         {
           name: "Kilnsea",
           position: [0.1392, 53.62],
-          ressources: {
+          resources: {
             gold: 760,
             food: 225,
             enemies: 50,
@@ -51,7 +52,7 @@ class Exploration extends React.Component {
         {
           name: "Margate",
           position: [1.38, 51.38],
-          ressources: {
+          resources: {
             gold: 28,
             food: 98,
             enemies: 42,
@@ -61,7 +62,7 @@ class Exploration extends React.Component {
         {
           name: "St fergus",
           position: [-1.83, 57.55],
-          ressources: {
+          resources: {
             gold: 1000,
             food: 500,
             enemies: 800,
@@ -71,7 +72,7 @@ class Exploration extends React.Component {
         {
           name: "York",
           position: [-1.08, 53.95],
-          ressources: {
+          resources: {
             gold: 700,
             food: 300,
             enemies: 200,
@@ -81,7 +82,7 @@ class Exploration extends React.Component {
         {
           name: "Stavenger",
           position: [5.73, 58.97],
-          ressources: {
+          resources: {
             gold: 600,
             food: 120,
             enemies: 50,
@@ -91,7 +92,7 @@ class Exploration extends React.Component {
         {
           name: "Uskedal",
           position: [5.86, 59.93],
-          ressources: {
+          resources: {
             gold: 0,
             food: 0,
             enemies: 1,
@@ -101,7 +102,7 @@ class Exploration extends React.Component {
         {
           name: "Kristinehamn",
           position: [14.1, 59.3],
-          ressources: {
+          resources: {
             gold: 150,
             food: 100,
             enemies: 5,
@@ -111,7 +112,7 @@ class Exploration extends React.Component {
         {
           name: "Esbjerg",
           position: [8.45, 55.47],
-          ressources: {
+          resources: {
             gold: 50,
             food: 250,
             enemies: 100,
@@ -121,7 +122,7 @@ class Exploration extends React.Component {
         {
           name: "Klitmøller",
           position: [8.54, 57.08],
-          ressources: {
+          resources: {
             gold: 980,
             food: 140,
             enemies: 90,
@@ -131,7 +132,7 @@ class Exploration extends React.Component {
         {
           name: "Aarhus",
           position: [10.21, 56.15],
-          ressources: {
+          resources: {
             gold: 1200,
             food: 250,
             enemies: 65,
@@ -141,7 +142,7 @@ class Exploration extends React.Component {
         {
           name: "Saint Malo",
           position: [-2.02, 48.64],
-          ressources: {
+          resources: {
             gold: 450,
             food: 230,
             enemies: 180,
@@ -151,7 +152,7 @@ class Exploration extends React.Component {
         {
           name: "Brest",
           position: [-4.48, 48.39],
-          ressources: {
+          resources: {
             gold: 50,
             food: 600,
             enemies: 100,
@@ -161,7 +162,7 @@ class Exploration extends React.Component {
         {
           name: "Le treport",
           position: [1.38, 50.05],
-          ressources: {
+          resources: {
             gold: 730,
             food: 10,
             enemies: 80,
@@ -171,7 +172,7 @@ class Exploration extends React.Component {
         {
           name: "Calais",
           position: [1.85, 50.95],
-          ressources: {
+          resources: {
             gold: 15,
             food: 100,
             enemies: 1000,
@@ -181,7 +182,7 @@ class Exploration extends React.Component {
         {
           name: "La Loupe",
           position: [1.01, 48.47],
-          ressources: {
+          resources: {
             gold: 1,
             food: 15,
             enemies: 25,
@@ -221,14 +222,14 @@ class Exploration extends React.Component {
     array[selectedMarker.id] = {
       name: markers.name,
       position: markers.position,
-      ressources: markers.ressources,
+      resources: markers.resources,
       done: true,
     };
     this.setState({
-      currentFood: currentFood + selectedMarker.object.ressources.food,
-      currentGold: currentGold + selectedMarker.object.ressources.gold,
-      currentKills: currentKills + selectedMarker.object.ressources.enemies,
-      currentWood: currentWood + selectedMarker.object.ressources.wood,
+      currentFood: currentFood + selectedMarker.object.resources.food,
+      currentGold: currentGold + selectedMarker.object.resources.gold,
+      currentKills: currentKills + selectedMarker.object.resources.enemies,
+      currentWood: currentWood + selectedMarker.object.resources.wood,
       markes: array,
       selectedMarker: null,
     });

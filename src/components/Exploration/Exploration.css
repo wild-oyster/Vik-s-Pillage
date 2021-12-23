@@ -8,46 +8,43 @@
   width: 100%;
 }
 .scoreBoard {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 20vh;
-  background-color: rgb(63, 63, 63);
-  border-radius: 0 0 20px 20px;
+  width: 30%;
+  height: 15vh;
+  background-color: #4b210a;
+  border-radius: 20px;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 38px 2px rgba(0,0,0,0.75);
-  color: #d6d6d6;
+  color: white;
   z-index: 2;
   font-size: 30px;
-  
 }
 
 .scoreBoard h3 {
   font-family: "Skranji";
   font-weight: 400;
 }
-.lootBoard{
+.lootBoard {
   width: 100%;
   height: 100%;
-  justify-content: space-evenly;
-  align-items: center;
   display: flex;
-  
 }
 
 .lootContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
-  height: 200px;
-  width: 400px;
+  height: 80px;
+  width: 100%;
   margin-bottom: 30px;
 }
 .loot {
   display: flex;
-  justify-content: space-evenly;
   color: #fff;
 }
 .mapMain {
@@ -59,17 +56,15 @@
   align-items: center;
 }
 .mapBox {
-  width: 70%;
-  height: 70vh;
-  margin-top: 150px;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  border-radius: 20px;
   overflow: hidden;
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 38px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 38px 2px rgba(0, 0, 0, 0.75);
 }
 .mapContainer {
   position: absolute;
@@ -87,11 +82,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: 30px 0 0 60px;
-  width: 250px;
-  height: 90%;
+  margin: 100px 0 0 60px;
+  width: 350px;
+  height: 70%;
   background-color: #0a324b;
-  color: #d6d6d6;
+  color: white;
   z-index: 1;
   padding: 5px;
   font-weight: bold;
@@ -123,37 +118,37 @@
   height: 50%;
   border-radius: 20px;
 }
-.logoRessourcesMapGold {
+.logoResourcesMapGold {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 30px;
   height: 30px;
-  background-image: url('../../assets/communs/gold.png');
+  background-image: url("../../assets/communs/gold.png");
 }
-.logoRessourcesMapFood{
+.logoResourcesMapFood {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 30px;
   height: 30px;
-  background-image: url('../../assets/communs/meat.png');
+  background-image: url("../../assets/communs/meat.png");
 }
-.logoRessourcesMapWood {
+.logoResourcesMapWood {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 30px;
   height: 30px;
-  background-image: url('../../assets/communs/wood.png');
+  background-image: url("../../assets/communs/wood.png");
 }
-.logoRessourcesMapEnemies {
+.logoResourcesMapEnemies {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 30px;
   height: 30px;
-  background-image: url('../../assets/communs/kill.png');
+  background-image: url("../../assets/communs/kill.png");
 }
 .buttonAttack {
   background-color: gray;
@@ -171,22 +166,22 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../../assets/Exploration/marker.png');
+  background-image: url("../../assets/Exploration/marker.png");
   width: 2.5em;
   height: 2.5em;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 853px){
-  .selectedMarker{
+@media only screen and (max-width: 1024px) and (min-width: 853px) {
+  .selectedMarker {
     top: 5%;
     left: 30%;
     margin: 0;
   }
-
 }
 
-@media only screen and (max-width:515px) and (min-width: 0px) {
-  .selectedMarker{
+@media only screen and (max-width: 515px) and (min-width: 0px) {
+  .selectedMarker {
     top: 5%;
     left: 0%;
     margin: 10px 12px 0;
@@ -196,7 +191,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .buttonAttack{
+  .buttonAttack {
     font-size: 20px;
     text-align: center;
     padding: 5px 10px 5px 10px;
