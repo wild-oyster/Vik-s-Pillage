@@ -1,4 +1,6 @@
-export const carouselSettings = {
+import { Settings } from "react-slick";
+
+export const carouselSettings: Settings = {
   dots: true,
   infinite: true,
   speed: 500,
@@ -8,6 +10,7 @@ export const carouselSettings = {
   responsive: [
     {
       breakpoint: 1176,
+      settings: "unslick",
     },
     {
       breakpoint: 1175,
