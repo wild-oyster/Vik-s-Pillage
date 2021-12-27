@@ -1,8 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "./images/logo.jpg";
+
+import { Link } from "react-router-dom";
+import React from "react";
 import imgprofile from "./images/ragnar-feat.jpg";
+import logo from "./images/logo.png";
 
 class Navbar extends React.Component {
   constructor() {
@@ -86,24 +87,6 @@ class Navbar extends React.Component {
           </Link>
         </div>
       </header>
-
-      // <div className="Navbar__globalContainer">
-      //   <div
-      //     className="LogoViks"
-      //     style={{
-      //       backgroundImage: `url("./images/Vik's & Pillage.jpg")`,
-      //     }}
-      //   />{" "}
-      //   <nav>
-      //     <div className="Navbar__elementHome">
-      //       <ul>
-      //         <li className="Navbar__elementExplorer">Explorer</li>
-      //         <li>Home </li>
-      //       </ul>
-      //     </div>
-      //   </nav>
-      //   <div className="Navbar__elementProfile">Le Profile</div>
-      // </div>
     );
   }
 }
