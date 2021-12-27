@@ -1,5 +1,7 @@
 import './CardProfile.css';
 
+import { truncateString } from '../../../../utils/string';
+
 function CardProfile({ name, text, img }) {
   return (
     <div className='cardGlobalContainer-card'>
@@ -13,7 +15,7 @@ function CardProfile({ name, text, img }) {
         </div>
         <div className='card-infos'>
           <h6 className='title-card-profile'>{name}</h6>
-          <p className='text-profile-card'>{text}</p>
+          <p className='text-profile-card'>{truncateString(text, 90)}</p>
         </div>
       </div>
     </div>
