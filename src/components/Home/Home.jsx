@@ -1,8 +1,9 @@
-import React from 'react';
-import sound from '../../assets/HomeImg/sound.mp3';
 import './Home.css';
+
 import Carousel from '../elements/Carousel/Carousel';
 import { GoMute } from 'react-icons/go';
+import React from 'react';
+import sound from '../../assets/HomeImg/sound.mp3';
 
 const Home = () => {
   function onPause() {
