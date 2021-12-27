@@ -1,52 +1,23 @@
-import React from 'react';
-import Slider from 'react-slick';
-import CardProfile from './CardProfile/CardProfile';
-import { Link } from 'react-router-dom';
-import FaceX from '../../../assets/Face/FaceX.png';
-import FaceMus from '../../../assets/Face/faceMus.png';
-import FaceN from '../../../assets/Face/FaceN.png';
-import FaceMax from '../../../assets/Face/FaceMax.jpg';
-import FaceWill from '../../../assets/Face/FaceW.jpg';
-import FaceF from '../../../assets/Face/FaceF.png';
-
-import {
-  SliderArrowPrev,
-  SliderArrowNext
-} from './ArrowsCarousel/ArrowsCarousel';
-
 import './Carousel.css';
 
+import {
+  SliderArrowNext,
+  SliderArrowPrev
+} from './ArrowsCarousel/ArrowsCarousel';
+
+import CardProfile from './CardProfile/CardProfile';
+import FaceF from '../../../assets/Face/FaceF.png';
+import FaceMax from '../../../assets/Face/FaceMax.jpg';
+import FaceMus from '../../../assets/Face/faceMus.png';
+import FaceN from '../../../assets/Face/FaceN.png';
+import FaceWill from '../../../assets/Face/FaceW.jpg';
+import FaceX from '../../../assets/Face/FaceX.png';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import Slider from 'react-slick';
+import { carouselSettings } from '../../../constant/config';
+
 function Carousel() {
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    adaptiveHeight: true,
-    prevArrow: <SliderArrowPrev />,
-    nextArrow: <SliderArrowNext />,
-    responsive: [
-      {
-        breakpoint: 1176
-      },
-      {
-        breakpoint: 1175,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 788,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
 
   const nicolas = {
     id: '1',
@@ -92,7 +63,7 @@ function Carousel() {
 
   return (
     <div className='carousel'>
-      <Slider {...carouselSettings}>
+      <Slider prevArrow={<SliderArrowPrev />} nextArrow={<SliderArrowNext />} {...carouselSettings} >
         <div className='container-card-carousel'>
           <Link to='/profile/2'>
             <CardProfile {...maxime} />

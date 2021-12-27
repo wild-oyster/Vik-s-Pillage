@@ -29,6 +29,7 @@
 }
 
 .card-infos {
+  min-height: 100%;
   width: 60%;
   text-align: center;
 }
@@ -37,6 +38,8 @@
   color: rgb(27, 27, 27);
   margin-top: 10px;
   text-align: left;
+  width: 100%;
+  min-height: 100%;
 }
 
 .title-card-profile {
