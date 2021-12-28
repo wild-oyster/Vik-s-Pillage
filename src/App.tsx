@@ -1,7 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import Error404 from "./components/Error404/Error404";
-import Exploration from "./components/Exploration/Exploration";
 import Home from "./components/Home/Home";
 import LoginPage from "./components/LoginPage/LoginPage";
 import NavalBase from "./components/NavalBase/NavalBase";
@@ -17,9 +16,9 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/Exploration">
+        {/* <Route path="/Exploration">
           <Exploration />
-        </Route>
+        </Route> */}
         <Route path="/navalbase">
           <NavalBase />
         </Route>
